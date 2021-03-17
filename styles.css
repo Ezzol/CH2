@@ -42,18 +42,31 @@ header{
 
 .landscapeMorning{
     background-image: url(img/stage1/o_tent.png);
+    animation: fadeIn ease 10s;
 }
+
+@keyframes fadeIn{
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+  }
 
 .landscapeNoon{
     background-image: url(img/stage2/m_tent.png);
+    transition-duration: 5s;
 }
 
 .landscapeEvening{
     background-image: url(img/stage3/a_tent.png);
+    transition-duration: 5s;
 }
 
 .landscapeNight{
     background-image: url(img/stage4/n_tent.png);
+    transition-duration: 5s;
 }
 
 .skyMorning{

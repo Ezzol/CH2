@@ -29,7 +29,7 @@ function clock(){
                 document.getElementById('tent').classList.add('landscapeEvening');
             }
 
-            else if(hour >= 20 && hour < 7){
+            else if(hour >= 20 || hour < 7){
                 // document.body.style.backgroundImage = "url('img/stage4/n_lucht.jpg')";
                 // document.getElementById('tent').style.backgroundImage = "url('img/stage4/n_tent.png')";
                 document.getElementById('tent').classList.remove('landscapeEvening');
