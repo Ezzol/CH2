@@ -12,55 +12,33 @@ function clock(){
             // document.body.style.backgroundImage = "url('img/stage1/o_lucht.jpg')";
             // document.getElementById('tent').style.backgroundImage = "url('img/stage1/o_tent.png')";
             document.getElementById('tent').classList.remove('landscapeNight');
-            // document.getElementById('tent').classList.remove('skyNight');
-            // document.getElementById('tent').classList.add('skyMorning');
             document.getElementById('tent').classList.add('landscapeMorning');
+            document.body.style.backgroundImage = "url('img/stage1/o_lucht.jpg')";
         }
 
             else if(hour >= 12 && hour < 17){
                 // document.body.style.backgroundImage = "url('img/stage2/m_lucht.jpg')";
                 // document.getElementById('tent').style.backgroundImage = "url('img/stage2/m_tent.png')";
                 document.getElementById('tent').classList.remove('landscapeMorning');
-                // document.getElementById('tent').classList.remove('skyMorning');
-                // document.getElementById('tent').classList.add('skyNoon');
                 document.getElementById('tent').classList.add('landscapeNoon');
+                document.body.style.backgroundImage = "url('img/stage2/m_lucht.jpg')";
             }
             
             else if(hour >= 17 && hour < 20){
                 // document.body.style.backgroundImage = "url('img/stage3/a_lucht.jpg')";
                 // document.getElementById('tent').style.backgroundImage = "url('img/stage3/a_tent.png')";
                 document.getElementById('tent').classList.remove('landscapeNoon');
-                // document.getElementById('tent').classList.remove('skyNoon');
-                // document.getElementById('tent').classList.add('skyEvening');
                 document.getElementById('tent').classList.add('landscapeEvening');
+                document.body.style.backgroundImage = "url('img/stage3/a_lucht.jpg')";
             }
 
             else if(hour >= 20 || hour < 7){
                 // document.body.style.backgroundImage = "url('img/stage4/n_lucht.jpg')";
                 // document.getElementById('tent').style.backgroundImage = "url('img/stage4/n_tent.png')";
                 document.getElementById('tent').classList.remove('landscapeEvening');
-                // document.getElementById('tent').classList.remove('skyEvening');
-                // document.getElementById('tent').classList.add('skyNight');
                 document.getElementById('tent').classList.add('landscapeNight');
+                document.body.style.backgroundImage = "url('img/stage4/n_lucht.jpg')";
             }
-
-            
-            if (hour >= 7 && hour < 12) {
-                document.body.style.backgroundImage = "url('img/stage1/o_lucht.jpg')";
-            }
-    
-                else if(hour >= 12 && hour < 17){
-                    document.body.style.backgroundImage = "url('img/stage2/m_lucht.jpg')";
-                }
-                
-                else if(hour >= 17 && hour < 20){
-                    document.body.style.backgroundImage = "url('img/stage3/a_lucht.jpg')";
-                }
-    
-                else if(hour >= 20 || hour < 7){
-                    document.body.style.backgroundImage = "url('img/stage4/n_lucht.jpg')";
-                }
-
 
         // Als er minder dan 10 seconden is, dus 0 t/m 9, dan moet er een 0 voor de seconden
         if (seconds < 10) {
