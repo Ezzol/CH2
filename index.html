@@ -1,0 +1,61 @@
+<!-- dit beschrijft dat ik in html-5 werk -->
+<!DOCTYPE html>
+<!-- Dit zegt iets over de taal van de website, namelijk Nederlands -->
+<html lang="nl">
+
+    <!-- In de head sectie staat relevantie informatie die voor het gehele document geldt, zoals de titel, externe bestanden en de gebruikte tekenset -->
+    <head>
+        <!-- textset utf-8 wordt gebruikt -->
+        <meta charset="utf-8" />
+        <!-- Viewport is het totale browserscherm dat getoond wordt -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- linkje naar externe css voor opmaak van het document -->
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <!-- Linkje naar externe JavaScript voor de interactie van het document. Defer zorgt ervoor dat de code pas geladen wordt als al het andere al geladen is -->
+        <script src="script.js" defer></script>
+        <!-- Dit geeft een klein favicoontje bovenin de browser weer :) -->
+        <link rel="shortcut icon" type="image/svg" href="img/rocket.svg"/>
+        <!-- Titel van deze website -->
+        <title>SpaceX klok Challenge 2</title>
+    </head>
+
+    <!-- In de body staat de header, de visuele data en de footer -->
+    <body>
+        <!-- In de header staat een sticky bar met het logo van SpaceX -->
+        <header>
+            <!-- Dit is de foto van het logo van SpaceX met een alternatieve tekst voor bijv. slechtzienden -->
+            <img src="img/SpaceXlogo.svg" alt="Logo van SpaceX met de tekst Space X in het wit met een paarse x. Daaronder staat in het paars het woord dashboard. SpaceX Dashboard." />
+        </header>
+        <!-- In de main staat het belangrijkste, namelijk de klok -->
+        <main>
+            <figure id="moon"></figure>
+            <figure id="sun"></figure>
+            <figure id="tent"></figure>
+            <figure id="campfire"></figure>
+            <article id="clockWrapper">
+                <div>
+                    <span id="weekDay">di</span>
+                    <span id="day">dag</span>
+                </div>
+                <div>
+                    <span id="hour">12</span>
+                    <span id="text1">uur</span>
+                </div>
+                <div>
+                    <span class="colon">:</span>
+                </div>
+                <div>
+                    <span id="minutes">23</span>
+                    <span id="text2">minuten</span>
+                </div>
+                <div>
+                    <span class="colon">:</span>
+                </div>
+                <div>
+                    <span id="seconds">49</span>
+                    <span id="text3">seconden</span>
+                </div>
+            </article>
+        </main>
+    </body>
+</html>
