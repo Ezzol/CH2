@@ -29,7 +29,7 @@ header{
 #tent{
     display: flex;
     justify-content: center;
-    background-image: url(img/stage1/o_tent.png);
+    /* background-image: url(img/stage1/o_tent.png); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
@@ -39,6 +39,39 @@ header{
     top: 0;
     margin: 0;
 }
+
+.landscapeMorning{
+    background-image: url(img/stage1/o_tent.png);
+}
+
+.landscapeNoon{
+    background-image: url(img/stage2/m_tent.png);
+}
+
+.landscapeEvening{
+    background-image: url(img/stage3/a_tent.png);
+}
+
+.landscapeNight{
+    background-image: url(img/stage4/n_tent.png);
+}
+
+.skyMorning{
+    background-image: url(img/stage1/o_lucht.jpg);
+}
+
+.skyNoon{
+    background-image: url(img/stage2/m_lucht.jpg);
+}
+
+.skyEvening{
+    background-image: url(img/stage3/a_lucht.jpg);
+}
+
+.skyNight{
+    background-image: url(img/stage4/n_lucht.jpg);
+}
+
 
 #clockWrapper{
     position: absolute;
