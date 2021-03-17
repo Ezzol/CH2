@@ -11,29 +11,29 @@ function clock(){
         if (hour >= 7 && hour < 12) {
             // document.body.style.backgroundImage = "url('img/stage1/o_lucht.jpg')";
             // document.getElementById('tent').style.backgroundImage = "url('img/stage1/o_tent.png')";
-            document.getElementById('tent').classList.add('.landscapeMorning');
-            document.getElementById('tent').classList.remove('.landscapeNight');
+            document.getElementById('tent').classList.add('landscapeMorning');
+            document.getElementById('tent').classList.remove('landscapeNight');
         }
 
             else if(hour >= 12 && hour < 17){
                 // document.body.style.backgroundImage = "url('img/stage2/m_lucht.jpg')";
                 // document.getElementById('tent').style.backgroundImage = "url('img/stage2/m_tent.png')";
-                document.getElementById('tent').classList.remove('.landscapeMorning');
-                document.getElementById('tent').classList.add('.landscapeNoon');
+                document.getElementById('tent').classList.remove('landscapeMorning');
+                document.getElementById('tent').classList.add('landscapeNoon');
             }
             
             else if(hour >= 17 && hour < 21){
                 // document.body.style.backgroundImage = "url('img/stage3/a_lucht.jpg')";
                 // document.getElementById('tent').style.backgroundImage = "url('img/stage3/a_tent.png')";
-                document.getElementById('tent').classList.remove('.landscapeNoon');
-                document.getElementById('tent').classList.add('.landscapeEvening');
+                document.getElementById('tent').classList.remove('landscapeNoon');
+                document.getElementById('tent').classList.add('landscapeEvening');
             }
 
             else if(hour >= 21 && hour < 7){
                 // document.body.style.backgroundImage = "url('img/stage4/n_lucht.jpg')";
                 // document.getElementById('tent').style.backgroundImage = "url('img/stage4/n_tent.png')";
-                document.getElementById('tent').classList.remove('.landscapeEvening');
-                document.getElementById('tent').classList.add('.landscapeNight');
+                document.getElementById('tent').classList.remove('landscapeEvening');
+                document.getElementById('tent').classList.add('landscapeNight');
             }
 
 
