@@ -187,12 +187,13 @@ header{
 
 
 /* desktop versie */
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 600px) {
     #globeWrapper{
         height: 100%;
     }
 
     #clockWrapper{
+        top: 30%;
         flex-direction: row;
     }
 
