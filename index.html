@@ -16,7 +16,7 @@
         <!-- Dit geeft een klein favicoontje bovenin de browser weer :) -->
         <link rel="shortcut icon" type="image/svg" href="img/rocket.svg"/>
         <!-- Titel van deze website -->
-        <title>SpaceX klok Challenge 2</title>
+        <title>SpaceX klok</title>
     </head>
 
     <!-- In de body staat de header, de visuele data en de footer -->
@@ -28,39 +28,55 @@
         </header>
         <!-- In de main staat het belangrijkste, namelijk de klok -->
         <main>
+            <!-- Deze div wrapt de zon en de maan in 1 container -->
             <div id="globeWrapper">
+                <!-- hierin staat de maan -->
                 <figure id="moon">
-                    <img src="img/maan.png" alt="maantje" class="sunMoon">
+                    <!-- de img tag met de maan er in -->
+                    <img src="img/maan.png" alt="ronde maan" class="sunMoon">
                 </figure>
+                <!-- hierin staat de zon -->
                 <figure id="sun">
-                    <img src="img/zon.png" alt="zonnetje" class="sunMoon">
+                    <!-- de img tag met de zon er in -->
+                    <img src="img/zon.png" alt="ronde zon" class="sunMoon">
                 </figure>
             </div>
+            <!-- In deze div zit het astronautje die je alleen 's nachts voorbij ziet komen :) En ja, hij houdt inderdaad meer van pizza dan hamsters :) -->
             <div id="astronaut">
+                <!-- De img van de astronaut met het pizzavlagggetje in zijn hand -->
                 <img src="img/stage4/n_astronaut.svg" alt="astronaut loves pizza, not hamsters" />
             </div>
+            <!-- Deze figuur bevat de hele voorgrond met tenten. Deze verandert in de JS om de zoveel uur -->
             <figure id="tent"></figure>
+            <!-- Deze figuur bevat het kampvuurtje dat als animatie vlammetjes heeft. Helaas kreeg ik deze niet superstrak ggepositioneerd, but I tried :) -->
             <figure id="campfire"></figure>
             
+            <!-- In dit article zit de klok. Er zijn diverse divjes omdat ik op die manier de klok zowel naast, als onder elkaar kan zetten -->
             <article id="clockWrapper">
+                <!-- Deze div bevat de dag van de week, aangestuurd vanuit javascript met de extra tekst 'dag' -->
                 <div class="blocks">
                     <span id="weekDay" class="extraData">wo</span>
                     <span id="day" class="extraData2">dag</span>
                 </div>
+                <!-- Deze div bevat de uren, aangestuurd vanuit javascript met de extra tekst 'uur' -->
                 <div class="blocks">
                     <span id="hour" class="extraData">12</span>
                     <span id="text1" class="extraData2">uur</span>
                 </div>
+                <!-- Dit is een dubbele punt. Deze staat apart omdat hij bij mobile niet zichtbaar is -->
                 <div class="colon">
                     <span class="blinker">:</span>
                 </div>
+                <!--- Deze div bevat de minuten, aangestuurd vanuit javascript met als extra tekst 'minuten' -->
                 <div class="blocks">
                     <span id="minutes" class="extraData">23</span>
                     <span id="text2" class="extraData2">minuten</span>
                 </div>
+                <!-- Dit is een dubbele punt. Deze staat apart omdat hij bij mobile niet zichtbaar is -->
                 <div class="colon">
                     <span class="blinker">:</span>
                 </div>
+                <!-- Deze div bevat de seconden, aangestuurd vanuit javascript met als extra tekst 'seconden' -->
                 <div class="blocks">
                     <span id="seconds" class="extraData">49</span>
                     <span id="text3" class="extraData2">seconden</span>

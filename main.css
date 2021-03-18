@@ -1,5 +1,10 @@
+/* ------------------------------------------------------------------- */
+/* ---------------------global content properties--------------------- */
+/* ------------------------------------------------------------------- */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
 
+/* De lucht achtergrond staat hierin en de standaard properties worden benoemd */
 html, body{
     background: url(img/stage1/o_lucht.jpg) no-repeat center center fixed;
     background-size: cover;
@@ -10,11 +15,13 @@ html, body{
     overflow: hidden;
 }
 
+/* Main heeft een relative position, dit doet nog niet veel, maar de onderliggende onderdelen van de pagina wel */
 main{
     position: relative;
     height: calc(100% - 60px);
 }
 
+/* De header opmaat met het logo van SpaceX er weer in */
 header{
     display: flex;
     justify-content: center;
@@ -27,7 +34,13 @@ header{
     z-index: 50;
 }
 
-/* position gebaseerd op de relative van main */
+
+
+/* ------------------------------------------------------------------- */
+/* --------------------------main properties-------------------------- */
+/* ------------------------------------------------------------------- */
+
+/* Tent bevat de image die door JS wordt gewijzigd iedere paar uur. De position is gebaseerd op de relative van main */
 #tent{
     display: flex;
     justify-content: center;
@@ -42,6 +55,7 @@ header{
     margin: 0;  
 }
 
+/* Dit is de opmaak van de wrapper om de zon en maan heen. Zo kan het later in een cirkel ronddraaien en staan de zon en maan tegenover elkaar */
 #globeWrapper{
     display: flex;
     justify-content: center;
@@ -50,7 +64,7 @@ header{
     position: relative;
 }
 
-
+/* De zon en de maan hebben elk specifieke properties zoals een breedte */
 #moon, #sun{
     align-items: center;
     height: 200px;
@@ -63,6 +77,7 @@ header{
     overflow: visible;
 }
 
+/* De maan staat bij top */
 #moon{
     top: 0;
     left: 0;
@@ -70,6 +85,7 @@ header{
     margin: 0 auto;
 }
 
+/* De zon staat bij bottom */
 #sun{
     bottom: 0;
     left: 0;
@@ -77,53 +93,59 @@ header{
     margin: 0 auto;
 }
 
+/* met deze keyframes verzorg ik de rotatie van de zon en de maan */
 @keyframes globe {
 	from { 	transform: rotate(0deg) rotate(0deg); }
 	to   {  transform: rotate(360deg) rotate(-360deg); }
 }
 
+/* Dit bepaald de breedte van de box waarin de zon en de maan zitten */
 .sunMoon{
     width: 300px;
 }
-/* 
-.animateGlobe{
-    animation: globe 15s linear infinite;
-} */
 
+/* Dit is de eerste tent achtergrond voor de ochtend */
 .landscapeMorning{
     background-image: url(img/stage1/o_tent.png);
     object-fit: cover;
 }
 
+/* Dit is de tweede tent achtergrond voor de middag */
 .landscapeNoon{
     background-image: url(img/stage2/m_tent.png);
 }
 
+/* Dit is de derde tent achtergrond voor de avond */
 .landscapeEvening{
     background-image: url(img/stage3/a_tent.png);
 }
 
+/* Dit is de vierde tent achtergrond voor de nacht */
 .landscapeNight{
     background-image: url(img/stage4/n_tent.png);
 }
 
+/* Dit is de eerste lucht achtergrond voor de ochtend */
 .skyMorning{
     background-image: url(img/stage1/o_lucht.jpg);
 }
 
+/* Dit is de tweede lucht achtergrond voor de middag */
 .skyNoon{
     background-image: url(img/stage2/m_lucht.jpg);
 }
 
+/* Dit is de derde lucht achtergrond voor de avond */
 .skyEvening{
     background-image: url(img/stage3/a_lucht.jpg);
 }
 
+/* Dit is de vierde lucht achtergrond voor de nacht */
 .skyNight{
     background-image: url(img/stage4/n_lucht.jpg);
 }
 
-
+/* Dit is de container die alles van de klok bevat. Voor mobile staat hij op column */
 #clockWrapper{
     position: absolute;
     top: 50%;
@@ -135,6 +157,7 @@ header{
     z-index: 5;
 }
 
+/* De individuele blokken krijgen een breedte en kleur mee */
 .blocks{
     display: flex;
     justify-content: center;
@@ -145,26 +168,29 @@ header{
     background-color: #F0B354;
 }
 
+/* De dubbele punt is niet zichtbaar in mobile weergave */
 .colon{
     display: none;
 }
 
+/* Dit is de opmaak van de getallen van de klok */
 .extraData{
     font-size: 2.5em;
     color: #fff;
 }
 
+/* Dit is de opmaak van de extra data onder de klokgetallen */
 .extraData2{
     color: #df8412;
     font-size: 0.8em;;
 }
 
-/* Dit is de dubbele punt in de klok */
+/* Dit is de fontgrootte van de dubbele punt in de klok */
 .blinker{
     font-size: 1.2em;
 }
 
-
+/* Dit is het kampvuur die geanimeerd wordt door middel van keyframes. Ik zou het liefste willen dat deze altijd ggoed op de afbeelding blijft staan, maar als de bg groter wordt dan staat ie niet meer goed */
 #campfire{
     position: fixed;
     width: 475px;
@@ -174,13 +200,12 @@ header{
     background-image: url(img/kampvuur1.png);
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-position: center; */
-    /* background-position: 35% 0%; */
     animation: fire 1.5s infinite linear;
     z-index: 5;
     overflow: visible;
 }
 
+/* Met deze 5 keyframes wordt een soort gifjee/animatie gesimuleerd alsof het vuur brand */
 @keyframes fire{
     0% {background-image: url(img/kampvuur1.png);}
     25% {background-image: url(img/kampvuur2.png);}
@@ -189,6 +214,7 @@ header{
     100% {background-image: url(img/kampvuur5.png);}
 }
 
+/* Deze astronaut is alleen zichtbaar in de nacht :) */
 #astronaut{
     position: absolute;
     top: 0;
@@ -199,6 +225,7 @@ header{
     opacity: 0;
 }
 
+/* Dit is de animatie van de astronaut als hij 's nachts wel beweegt. Javascript maakt de opacity dan 100% */
 @keyframes pizzaguy{
     0%{left: 0px; top: 90px;}
     20%{top: 30px;}
@@ -209,17 +236,24 @@ header{
 }
 
 
+
+/* ------------------------------------------------------------------- */
+/* ---------------------Media Query Mobile liggend-------------------- */
+/* ------------------------------------------------------------------- */
+
 /* brede smartphone/smalle tablet versie */
 @media only screen and (min-width: 600px) {
     #globeWrapper{
         height: 100%;
     }
 
+    /* De klok gaat in een row ipv column nu er ruimte voor is */
     #clockWrapper{
         top: 30%;
         flex-direction: row;
     }
 
+    /* De dubbele punt is ook in een box opgemaakt */
     .colon{
         display: flex;
         align-items: center;
@@ -229,11 +263,13 @@ header{
         color: #df8412;
     }
 
+    /* De dubbele punt knippert met een animation */
     .blinker{
         padding-bottom: 15px;
         animation: blinker 1.5s linear infinite;
     }
 
+    /* met dit keyframe verandert de opacity elke 1.5 seconden */
     @keyframes blinker{
         50% {opacity: 0;}
     }
@@ -241,51 +277,65 @@ header{
 
 
 
+/* ------------------------------------------------------------------- */
+/* -------------------------Media Query tablet------------------------ */
+/* ------------------------------------------------------------------- */
 
 /* tablet versie */
 @media only screen and (min-width: 768px) {
+    /* De klok staat iets lager zodat je meer van de lucht ziet */ 
     #clockWrapper{
         top: 33%;
     }
 
+    /* De klok blokken worden groter */
     .blocks{
         width: 150px;
         height: 150px;
     }
 
+    /* De dubbele punt box wordt daardoor ook hoger */
     .colon{
         height: 150px;
     }
 
+    /* De tekst wordt iets groter */
     .extraData{
         font-size: 3em;
-        color: #fff;
     }
     
+    /* De tekst wordt iets groter */
     .extraData2{
-        color: #df8412;
         font-size: 0.8em;;
     }
 }
 
+
+
+/* ------------------------------------------------------------------- */
+/* ------------------------Media Query Desktop------------------------ */
+/* ------------------------------------------------------------------- */
+
 /* Desktop versie */
 @media only screen and (min-width: 1200px) {
+    /* De blokken worden nog ietsje groter */
     .blocks{
         width: 200px;
         height: 200px;
     }
 
+    /* De hoogte van de dubbele punt daardoor ook */
     .colon{
         height: 200px;
     }
 
+    /* De tekst wordt groter */
     .extraData{
         font-size: 5em;
-        color: #fff;
     }
     
+    /* de tekst wordt groter */
     .extraData2{
-        color: #df8412;
         font-size: 1em;;
     }
 }
