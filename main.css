@@ -125,7 +125,7 @@ header{
 
 #clockWrapper{
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%,-50%);
     display: flex;
@@ -160,26 +160,24 @@ header{
 
 
 #campfire{
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    top: 0; left: 0;
-    margin: auto;
-    background-image: url(img/stage3/a_kampvuur1.png);
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    top: 48vh; left: 19vw;
+    /* margin: auto; */
+    /* background-image: url(img/stage3/a_kampvuur1.png); */
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-size: cover;
     background-position: center;
-    /* animation: fire 2s infinite linear; */
-    z-index: 4;
+    animation: fire 0.8s infinite linear;
+    z-index: 10;
 }
 
-/* @keyframes fire{
+@keyframes fire{
     0% {background-image: url(img/stage3/a_kampvuur1.png);}
     50% {background-image: url(img/stage3/a_kampvuur2.png);}
     100% {background-image: url(img/stage3/a_kampvuur3.png);}
 }
-
- */
 
 
 
@@ -200,9 +198,30 @@ header{
         display: flex;
         align-items: center;
         height: 100px;
-        width: 100spx;
+        width: 4px;
         background-color: #F0B354;
         color: #df8412;
     }
 
+    .blinker{
+        padding-bottom: 15px;
+        animation: blinker 1.5s linear infinite;
+    }
+
+    @keyframes blinker{
+        50% {opacity: 0;}
+    }
+
+
+
+
+
+
+    .separator {
+        animation: blinker 2s linear infinite;
+      }
+      
+      @keyframes blinker {  
+        50% { opacity: 0; }
+      }
 }
