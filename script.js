@@ -19,7 +19,6 @@ function clock(){
         var hour = today.getHours();
         var rotation = (hour*15) + (minutes*0.25) + (seconds*(0.25/60));
 
-        
         document.getElementById('globeWrapper').style.transform = 'rotate(' + rotation + 'deg)';
 
 
@@ -55,12 +54,6 @@ function clock(){
                 document.getElementById('tent').classList.add('landscapeNight');
                 document.body.style.backgroundImage = "url('img/stage4/n_lucht.jpg')";
             }
-
-            if (hour >= 11){
-                document.getElementById('moon').classList.add('animateGlobe');
-                console.log('testanimatie');
-            }
-            
 
         // Als er minder dan 10 seconden is, dus 0 t/m 9, dan moet er een 0 voor de seconden
         if (seconds < 10) {

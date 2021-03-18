@@ -32,7 +32,6 @@ header{
 #tent{
     display: flex;
     justify-content: center;
-    /* background-image: url(img/stage1/o_tent.png); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 35% 0%;
@@ -41,24 +40,13 @@ header{
     height: 100%;
     top: 0;
     margin: 0;  
-    /* animation: fadeIn ease 3s; */
 }
-
-/* @keyframes fadeIn{
-    0% {
-        opacity:0;
-    }
-    100% {
-        opacity:1;
-    }
-} */
-
 
 #globeWrapper{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 78%;
     position: relative;
 }
 
@@ -147,15 +135,27 @@ header{
     width: 200px;
 }
 
+#campfire{
+    width: 300px;
+    height: 300px;
+    background-image: url(img/stage3/a_kampvuur1.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    animation: fire 0.5s infinite linear;
+    z-index: 4;
+}
 
-
-
-
+@keyframes fire{
+    0% {background-image: url(img/stage3/a_kampvuur1.png);}
+    33% {background-image: url(img/stage3/a_kampvuur2.png);}
+    66% {background-image: url(img/stage3/a_kampvuur3.png);}
+}
 
 /* desktop versie */
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 1000px) {
     #globeWrapper{
-        height: 78%;
+        height: 100%;
     }
 
 }
