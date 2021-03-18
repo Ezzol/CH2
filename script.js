@@ -70,5 +70,7 @@ function clock(){
 }
 
 // Run de klok en zet de interval van de klok op 1 seconde
-clock();
-setInterval(clock, 1000);
+window.onload = function(){
+    clock();
+    setInterval(clock, 1000);
+};
