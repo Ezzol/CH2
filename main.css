@@ -24,7 +24,7 @@ header{
     top: 0;
     background-color: #141A28;
     border-bottom: 2px solid #C04FFA;
-    z-index: 2;
+    z-index: 50;
 }
 
 /* position gebaseerd op de relative van main */
