@@ -13,7 +13,6 @@ html, body{
 main{
     position: relative;
     height: calc(100% - 60px);
-
 }
 
 header{
@@ -52,8 +51,6 @@ header{
 
 
 #moon, #sun{
-    /* display: flex;
-    justify-content: center; /* align horizontal */
     align-items: center;
     height: 200px;
     position: absolute;
@@ -128,31 +125,64 @@ header{
 
 #clockWrapper{
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 5;
 }
 
+.blocks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100px;
+    height: 100px;
+    background-color: #F0B354;
+}
+
+.colon{
+    display: none;
+}
+
+.extraData{
+    font-size: 3em;
+    color: #fff;
+}
+
+.extraData2{
+    color: #df8412;
+    font-size: 0.8em;;
+}
+
+
 #campfire{
+    position: absolute;
     width: 300px;
     height: 300px;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0; left: 0;
     margin: auto;
-    /* background-image: url(img/stage3/a_kampvuur1.png); */
+    background-image: url(img/stage3/a_kampvuur1.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    animation: fire 1s infinite linear;
+    /* animation: fire 2s infinite linear; */
     z-index: 4;
 }
 
-@keyframes fire{
-    0% {background-image: url(img/stage3/a-kampvuur1.png);}
-    50% {background-image: url(img/stage3/a-kampvuur2.png);}
-    100% {background-image: url(img/stage3/a-kampvuur3.png);}
+/* @keyframes fire{
+    0% {background-image: url(img/stage3/a_kampvuur1.png);}
+    50% {background-image: url(img/stage3/a_kampvuur2.png);}
+    100% {background-image: url(img/stage3/a_kampvuur3.png);}
 }
+
+ */
+
+
+
 
 
 
@@ -160,6 +190,19 @@ header{
 @media only screen and (min-width: 1000px) {
     #globeWrapper{
         height: 100%;
+    }
+
+    #clockWrapper{
+        flex-direction: row;
+    }
+
+    .colon{
+        display: flex;
+        align-items: center;
+        height: 100px;
+        width: 100spx;
+        background-color: #F0B354;
+        color: #df8412;
     }
 
 }

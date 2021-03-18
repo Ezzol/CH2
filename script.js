@@ -17,6 +17,15 @@ function clock(){
         var seconds = today.getSeconds();
         var minutes = today.getMinutes();
         var hour = today.getHours();
+        var days = ['ZO', 'MA', 'DI', 'WO', 'DO', 'VR', 'ZA', 'ZO'];
+        // weekday[0] = "MA";
+        // weekday[1] = "DI";
+        // weekday[2] = "WO";
+        // weekday[3] = "DO";
+        // weekday[4] = "VR";
+        // weekday[5] = "ZA";
+        // weekday[6] = "ZO";
+
         var rotation = (hour*15) + (minutes*0.25) + (seconds*(0.25/60));
 
         document.getElementById('globeWrapper').style.transform = 'rotate(' + rotation + 'deg)';
@@ -60,8 +69,13 @@ function clock(){
             seconds = '0' + seconds;
         }
 
-    document.getElementById('weekDay').innerHTML = today.getHours() + ':' + today.getMinutes() + ':' + seconds;
-}
+    // document.getElementById('weekDay').innerHTML = today.getHours() + ':' + today.getMinutes() + ':' + seconds;
+    document.getElementById('weekDay').innerHTML = days[today.getDay()];
+    document.getElementById('hour').innerHTML = today.getHours();
+    document.getElementById('minutes').innerHTML = today.getMinutes();
+    document.getElementById('seconds').innerHTML = today.getSeconds();
+
+};
 
 clock();
 setInterval(clock, 1000);
