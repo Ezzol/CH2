@@ -16,7 +16,7 @@ function clock(){
          // dit is alleen voor de seconden. Moet dus ook nog voor minuten en uren gebeuren. Dit MOET binnen de functie om elke seconde te verversen
         var seconds = today.getSeconds();
         var minutes = today.getMinutes();
-        var hour = today.getHours() +6;
+        var hour = today.getHours();
         var days = ['ZO', 'MA', 'DI', 'WO', 'DO', 'VR', 'ZA', 'ZO'];
         // weekday[0] = "MA";
         // weekday[1] = "DI";
