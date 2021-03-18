@@ -138,19 +138,23 @@ header{
 #campfire{
     width: 300px;
     height: 300px;
-    background-image: url(img/stage3/a_kampvuur1.png);
+    top: 0; left: 0; right: 0; bottom: 0;
+    margin: auto;
+    /* background-image: url(img/stage3/a_kampvuur1.png); */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    animation: fire 0.5s infinite linear;
+    animation: fire 1s infinite linear;
     z-index: 4;
 }
 
 @keyframes fire{
-    0% {background-image: url(img/stage3/a_kampvuur1.png);}
-    33% {background-image: url(img/stage3/a_kampvuur2.png);}
-    66% {background-image: url(img/stage3/a_kampvuur3.png);}
+    0% {background-image: url(img/stage3/a-kampvuur1.png);}
+    50% {background-image: url(img/stage3/a-kampvuur2.png);}
+    100% {background-image: url(img/stage3/a-kampvuur3.png);}
 }
+
+
 
 /* desktop versie */
 @media only screen and (min-width: 1000px) {
