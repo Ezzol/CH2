@@ -16,7 +16,7 @@ function clock(){
          // dit is alleen voor de seconden. Moet dus ook nog voor minuten en uren gebeuren. Dit MOET binnen de functie om elke seconde te verversen
         var seconds = today.getSeconds();
         var minutes = today.getMinutes();
-        var hour = today.getHours();
+        var hour = today.getHours() +6;
         var days = ['ZO', 'MA', 'DI', 'WO', 'DO', 'VR', 'ZA', 'ZO'];
         // weekday[0] = "MA";
         // weekday[1] = "DI";
@@ -62,6 +62,7 @@ function clock(){
                 document.getElementById('tent').classList.remove('landscapeEvening');
                 document.getElementById('tent').classList.add('landscapeNight');
                 document.body.style.backgroundImage = "url('img/stage4/n_lucht.jpg')";
+                document.getElementById('astronaut').style.opacity = "1";
             }
 
         // Als er minder dan 10 seconden is, dus 0 t/m 9, dan moet er een 0 voor de seconden

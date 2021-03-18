@@ -150,13 +150,18 @@ header{
 }
 
 .extraData{
-    font-size: 3em;
+    font-size: 2.5em;
     color: #fff;
 }
 
 .extraData2{
     color: #df8412;
     font-size: 0.8em;;
+}
+
+/* Dit is de dubbele punt in de klok */
+.blinker{
+    font-size: 1.2em;
 }
 
 
@@ -171,7 +176,7 @@ header{
     background-size: cover;
     /* background-position: center; */
     /* background-position: 35% 0%; */
-    animation: fire 2s infinite linear;
+    animation: fire 1.5s infinite linear;
     z-index: 5;
     overflow: visible;
 }
@@ -184,9 +189,27 @@ header{
     100% {background-image: url(img/kampvuur5.png);}
 }
 
+#astronaut{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    animation: pizzaguy 30s infinite linear;
+    opacity: 0;
+}
+
+@keyframes pizzaguy{
+    0%{left: 0px; top: 90px;}
+    20%{top: 30px;}
+    40%{top: 90px;}
+    60%{top: 30px;}
+    80%{top: 90px;}
+    100%{left: 100%; top: 30px;}
+}
 
 
-/* desktop versie */
+/* brede smartphone/smalle tablet versie */
 @media only screen and (min-width: 600px) {
     #globeWrapper{
         height: 100%;
@@ -214,4 +237,56 @@ header{
     @keyframes blinker{
         50% {opacity: 0;}
     }
+}
+
+
+
+
+/* tablet versie */
+@media only screen and (min-width: 768px) {
+    #clockWrapper{
+        top: 33%;
+    }
+
+    .blocks{
+        width: 150px;
+        height: 150px;
+    }
+
+    .colon{
+        height: 150px;
+    }
+
+    .extraData{
+        font-size: 3em;
+        color: #fff;
+    }
+    
+    .extraData2{
+        color: #df8412;
+        font-size: 0.8em;;
+    }
+}
+
+/* Desktop versie */
+@media only screen and (min-width: 1200px) {
+    .blocks{
+        width: 200px;
+        height: 200px;
+    }
+
+    .colon{
+        height: 200px;
+    }
+
+    .extraData{
+        font-size: 5em;
+        color: #fff;
+    }
+    
+    .extraData2{
+        color: #df8412;
+        font-size: 1em;;
+    }
+
 }
