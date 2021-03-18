@@ -164,13 +164,15 @@ header{
     width: 500px;
     height: 500px;
     top: 48vh; left: 19vw;
-    /* margin: auto; */
+    margin: auto;
     /* background-image: url(img/stage3/a_kampvuur1.png); */
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    /* background-position: center; */
+    /* background-position: 35% 0%; */
     animation: fire 0.8s infinite linear;
     z-index: 10;
+    overflow: visible;
 }
 
 @keyframes fire{
