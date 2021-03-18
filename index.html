@@ -10,7 +10,7 @@
         <!-- Viewport is het totale browserscherm dat getoond wordt -->
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <!-- linkje naar externe css voor opmaak van het document -->
-        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <link rel="stylesheet" type="text/css" href="main.css" />
         <!-- Linkje naar externe JavaScript voor de interactie van het document. Defer zorgt ervoor dat de code pas geladen wordt als al het andere al geladen is -->
         <script src="script.js" defer></script>
         <!-- Dit geeft een klein favicoontje bovenin de browser weer :) -->
@@ -28,12 +28,14 @@
         </header>
         <!-- In de main staat het belangrijkste, namelijk de klok -->
         <main>
-            <!-- <figure id="moon">
-                <img src="img/maan.png" alt="maantje" class="sunMoon">
-            </figure>
-            <figure id="sun">
-                <img src="img/zon.png" alt="zonnetje" class="sunMoon">
-            </figure> -->
+            <div id="globeWrapper">
+                <figure id="moon">
+                    <img src="img/maan.png" alt="maantje" class="sunMoon">
+                </figure>
+                <figure id="sun">
+                    <img src="img/zon.png" alt="zonnetje" class="sunMoon">
+                </figure>
+            </div>
             <figure id="tent"></figure>
             <figure id="campfire"></figure>
             <article id="clockWrapper">

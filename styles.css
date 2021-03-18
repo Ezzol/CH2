@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
 
 html, body{
-    background: url(img/stage1/o_lucht.jpg) no-repeat center center fixed;
+    background: url(img/stage1/o_lucht.jpg) no-repeat fixed;
     background-size: cover;
     margin: 0;
     padding: 0;
@@ -22,14 +22,26 @@ header{
     height: 60px;
     top: 0;
     background-color: #141A28;
-    border-bottom: 2px solid #C04FFA;
+    border-bottom: 8px solid #C04FFA;
+}
+
+#moon{
+    width: 300px;
+    text-align: center;
+}
+
+#moon img{
+    vertical-align: middle;
+}
+
+figure .sunMoon{
+    width: 300px;
 }
 
 /* position gebaseerd op de relative van main */
 #tent{
     display: flex;
     justify-content: center;
-    /* background-image: url(img/stage1/o_tent.png); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
@@ -38,35 +50,30 @@ header{
     height: 100vh;
     top: 0;
     margin: 0;
+    animation: opacity 10s;
+}
+
+@keyframes opacity{
+    0%{ opacity: 0; 
+    }
+    100%{ opacity: 1;
+    }
 }
 
 .landscapeMorning{
     background-image: url(img/stage1/o_tent.png);
-    animation: fadeIn ease 10s;
 }
-
-@keyframes fadeIn{
-    0% {
-        opacity:0;
-    }
-    100% {
-        opacity:1;
-    }
-  }
 
 .landscapeNoon{
     background-image: url(img/stage2/m_tent.png);
-    transition-duration: 5s;
 }
 
 .landscapeEvening{
     background-image: url(img/stage3/a_tent.png);
-    transition-duration: 5s;
 }
 
 .landscapeNight{
     background-image: url(img/stage4/n_tent.png);
-    transition-duration: 5s;
 }
 
 .skyMorning{
@@ -88,6 +95,6 @@ header{
 
 #clockWrapper{
     position: absolute;
-    top: 100;
-    left: 100;
+    top: 0;
+    left: 0;
 }
